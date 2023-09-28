@@ -1,0 +1,107 @@
+// COMMON IMPORTS
+@import "../config/variables";
+
+
+
+.top-section {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    z-index: 2;
+
+    // width: 100vw;
+    //min-height: 768px;
+    .top-section-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .new-container {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(-50%);
+        /*  padding-bottom: 180px; */
+        gap: 100px;
+    }
+
+    picture,
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: 100%;
+    }
+
+    .heading {
+        >span {
+            color: $color-font-second;
+        }
+    }
+
+    .text {
+        color: $color-light;
+        max-width: 24vw;
+        font-size: .8rem;
+        margin-left: auto;
+    }
+
+    .mouse {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px;
+        animation: mouse-anim 3s infinite;
+    }
+}
+
+@keyframes mouse-anim {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-20px);
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* .typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
+
+// Components Import
+@import "../components/tabs";

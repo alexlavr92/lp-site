@@ -1,0 +1,232 @@
+/* Global CSS */
+* {
+    -webkit-box-sizing: $box-border;
+    box-sizing: $box-border;
+}
+
+html {
+    font-size: $body-font-size + 0px;
+}
+
+
+
+body {
+    background-color: $color-background-primary;
+    color: $color-default;
+    font-family: $font-primary;
+    font-weight: $font-primary-weight;
+    //font-size: $body-font-size + 0px;
+    line-height: $body-line-height + 0%;
+    margin: 0;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+body * {
+    box-sizing: inherit;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+section {
+    &:not(.top-section) {
+        padding: 85px 0;
+        padding-top: 170px;
+    }
+
+    &.main-tabs-section {
+        padding-top: 100px !important;
+    }
+
+
+    &.grey {
+        background: #F1F1F1;
+    }
+
+    &.white {
+        background: #ffffff;
+    }
+}
+
+.new-container {
+    width: 94vw;
+    margin: 0 auto;
+}
+
+.btn {
+    font-size: .8rem;
+    letter-spacing: .2px;
+    position: relative;
+    //font-weight: 600;
+    padding: 15px 50px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    overflow: hidden;
+
+    span {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    >.circle {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        background: transparent;
+        border-radius: 50%;
+
+        &.anim {
+            opacity: 0.3;
+            animation: touch 0.8s ease-out;
+        }
+    }
+
+    &.btn-orange {
+        color: $color-default-light;
+        background: $bg-btn-primary;
+
+        >.circle {
+            background: rgba(255, 255, 255, .4);
+        }
+    }
+
+    &.btn-radius {
+        border-radius: 50px;
+    }
+}
+
+.link {
+    letter-spacing: 0.4px;
+    transition: $transition;
+
+    &.link-orange {
+        color: $color-font-second;
+        border-bottom: 1px solid $color-font-second;
+
+    }
+
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+@keyframes touch {
+    40% {
+        opacity: 0.2;
+    }
+
+    100% {
+        width: 800px;
+        height: 800px;
+        opacity: 0;
+        margin: -400px;
+    }
+}
+
+h1 {
+    font-size: 75px;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 30px;
+
+    &.heading-black {
+        color: $color-default;
+    }
+}
+
+.heading {
+    font-family: $font-heading;
+    font-weight: 500;
+}
+
+.heading-absolute {
+    position: absolute;
+}
+
+.heading-white {
+    color: $color-font-heading-light;
+}
+
+.heading-black {
+    color: $color-font-heading-dark;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        position: relative;
+        padding-left: 30px;
+        color: #272626;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #272626;
+        }
+    }
+}
+
+.page-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .page-scroll__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .page-scroll__blackout {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        pointer-events: none;
+    }
+
+    .page-scroll__item-wrapper {
+        min-height: 100%;
+        position: relative;
+        background: #ffffff;
+    }
+}

@@ -1,0 +1,41 @@
+// TYPOGRAPHY
+// ---------------------------------------------------------------
+$font-heading: "HelveticaNeueCyr";
+$font-primary: "Lato";
+$font-primary-weight: normal;
+//$font-secondary: "Shadows Into Light", cursive;
+// $font-tertiary: "Oswald", sans-serif;
+
+$body-font-size: 20;
+$root-font-size: 16;
+$body-line-height: 150;
+
+// COLORS
+// ---------------------------------------------------------------
+$color-font-heading-dark: #333333;
+$color-font-heading-light: #FFFFFF;
+//$color-font-light: #ffffff;
+$color-font-second: #F93C00;
+$placeholder-color: rgba(0, 0, 0, .5);
+
+$color-background-primary: #ffffff;
+$color-background-second: #F1F1F1;
+
+$color-default: #000000;
+$color-default-light: #ffffff;
+
+$color-btn-primary: #F93C00;
+
+$color-light: #FFF;
+
+$bg-btn-primary: #F93C00;
+$bg-btn-primary-hover: red;
+
+
+// Animation 
+// ---------------------------------------------------------------
+
+$transition: all .2s ease;
+
+// Box Sizing
+$box-border: border-box;
