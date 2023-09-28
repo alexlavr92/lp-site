@@ -24,7 +24,7 @@ module.exports = {
 
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'assets/js/[name].bundle.js',
         clean: true,
         publicPath: './',
@@ -53,7 +53,7 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/fonts/[name].[ext]'
+                    filename: 'assets/fonts/[name][ext]'
                 }
                 /*   filename:  */
             },
@@ -71,8 +71,8 @@ module.exports = {
             template: path.join(__dirname, 'src', 'index.html'),
             filename: 'index.html',
             chunks: ['vendors', 'index'],
-            scriptLoading: 'blocking',
-            path: path.resolve(__dirname, 'dist'),
+            inject: 'body',
+            publicPath: './'
         }),
         new HtmlWebpackDeployPlugin({
             packagesPath: 'vendor',
@@ -133,8 +133,18 @@ module.exports = {
 
 
     // devServer: {
-    //     contentBase: path.join(__dirname, 'dist'),
+    //     // overlay: true,
+    //     client: {
+    //         overlay: true,
+    //     },
+    //     // historyApiFallback: true,
+    //     // contentBase: './dist',
+    //     static: {
+    //         directory: path.join(__dirname, '/'),
+    //     },
     //     watchFiles: path.join(__dirname, 'src'),
+    //     // contentBase: path.join(__dirname, 'dist'),
+    //     hot: true,
     //     port: 9000,
     //     open: true,
     // },
