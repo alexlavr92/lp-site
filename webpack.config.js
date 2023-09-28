@@ -13,7 +13,7 @@ module.exports = {
 
         },
     },
-    watch: true,
+    // watch: true,
     // externalsType: 'script',
     // externals: {
     //     jqueryMousewheel: ['https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'],
