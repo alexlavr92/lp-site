@@ -20,6 +20,8 @@
         left: 0;
         width: 100%;
         height: 100%;
+        // background: rgba(1, 25, 50, .5);
+        // z-index: -1;
     }
 
     .new-container {
@@ -27,8 +29,9 @@
         position: absolute;
         top: 0;
         left: 50%;
-        flex-direction: column;
-        justify-content: center;
+        /*  flex-direction: column; */
+        align-items: center;
+        justify-content: space-between;
         transform: translateX(-50%);
         /*  padding-bottom: 180px; */
         gap: 100px;
@@ -42,11 +45,14 @@
         object-fit: 100%;
     }
 
-    .heading {
-        >span {
-            color: $color-font-second;
-        }
-    }
+
+}
+
+.top-section-contents {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
 
     .text {
         color: $color-light;
@@ -59,25 +65,72 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 100px;
+        bottom: 0;
         animation: mouse-anim 3s infinite;
+
+        // &:before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     width: 150%;
+        //     height: 150%;
+        //     transform: translate(-50%, -50%);
+        //     background: transparent;
+        // }
+    }
+
+    .typed-elems_wrapper {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+.top-options,
+.top-option {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.top-options {
+    gap: 2vw;
+    // margin-right: 50px;
+}
+
+.top-option {
+    padding: 20px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.10);
+    width: 270px;
+    gap: 20px;
+    backdrop-filter: blur(15px);
+    color: $color-default-light;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.16px;
+    font-size: .8rem;
+
+    >.img {
+        width: 40px;
     }
 }
 
 @keyframes mouse-anim {
     0% {
         transform: translateY(0);
-        opacity: 1;
+        opacity: .5;
     }
 
     50% {
-        transform: translateY(-20px);
-        opacity: .5;
+        transform: translateY(20px);
+        opacity: 1;
     }
 
     100% {
         transform: translateY(0);
-        opacity: 1;
+        opacity: .5;
     }
 }
 
@@ -104,4 +157,5 @@
 } */
 
 // Components Import
-@import "../components/tabs";
+// @import "../components/tabs";
+// @import "../components/typed";

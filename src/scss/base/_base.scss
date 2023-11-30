@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: $body-font-size + 0px;
+    font-size: $body-font-size;
 }
 
 
@@ -68,7 +68,7 @@ section {
 }
 
 .new-container {
-    width: 94vw;
+    width: 90vw;
     margin: 0 auto;
 }
 
@@ -93,6 +93,10 @@ section {
         position: absolute;
         background: transparent;
         border-radius: 50%;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // transform-origin: 50% 50%;
 
         &.anim {
             opacity: 0.3;
@@ -142,8 +146,9 @@ section {
     }
 }
 
-h1 {
-    font-size: 75px;
+h1,
+.h1 {
+    font-size: 3.7rem;
     line-height: 120%;
 }
 

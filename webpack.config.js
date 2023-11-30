@@ -59,7 +59,8 @@ module.exports = {
                     //     },
                     // },
                     // },
-                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    // devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader'
@@ -137,9 +138,7 @@ module.exports = {
     // mode: 'development',
     plugins: [
         // new webpack.ProvidePlugin({
-        //     $: "jquery",
-        //     jQuery: "jquery",
-        //     "window.jQuery": "jquery"
+        //     SlidersElems: path.resolve(__dirname, 'src', 'js/components/sliders/sliders.js')
         // }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html'),

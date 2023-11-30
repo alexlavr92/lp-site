@@ -1,0 +1,17 @@
+@import "scss/config/variables";
+
+.typed-elems_wrapper {
+    .heading {
+        color: #6B829A;
+
+        >span {
+            color: $color-font-heading-light;
+        }
+    }
+}
+
+.typed-elem {
+    &:not(.typed-current) {
+        display: none;
+    }
+}

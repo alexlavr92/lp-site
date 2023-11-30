@@ -1,21 +1,29 @@
+@import 'functions';
+
+
 // TYPOGRAPHY
 // ---------------------------------------------------------------
 $font-heading: "HelveticaNeueCyr";
 $font-primary: "Lato";
 $font-primary-weight: normal;
-//$font-secondary: "Shadows Into Light", cursive;
+$font-secondary: "HelveticaNeueCyr";
 // $font-tertiary: "Oswald", sans-serif;
 
-$body-font-size: 20;
-$root-font-size: 16;
+$min-font-size: 16;
+$max-font-size: 20;
+// $root-font-size: 16;
+$body-font-size: calcFluidFontSize($min-font-size, $max-font-size, 320, 1920, px);
 $body-line-height: 150;
+
+$font-medium: 500;
+$font-bold: bold;
 
 // COLORS
 // ---------------------------------------------------------------
 $color-font-heading-dark: #333333;
 $color-font-heading-light: #FFFFFF;
 //$color-font-light: #ffffff;
-$color-font-second: #F93C00;
+$color-font-second: #f93c00;
 $placeholder-color: rgba(0, 0, 0, .5);
 
 $color-background-primary: #ffffff;
